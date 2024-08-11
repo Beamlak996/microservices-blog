@@ -14,6 +14,7 @@ app.get("/posts", (req, res) => {
 
 app.post("/posts", (req, res) => {
     const id = randomBytes(4).toString('hex')
+    const { title } = req.body
 
     posts[id] = {
         id, title
@@ -23,5 +24,5 @@ app.post("/posts", (req, res) => {
 })
 
 app.listen(4000, () => {
-    console.log("Listening to port 400")
+    console.log("Listening to port 4000")
 })
