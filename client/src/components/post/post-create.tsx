@@ -10,11 +10,10 @@ export const PostCreate = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4000/posts", {
+      await axios.post("http://localhost:4000/posts", {
         title,
       });
 
-      console.log(res)
     } catch (error) {
       console.log("Something went wrong.");
     } finally {
