@@ -17,16 +17,17 @@ export const PostList = () => {
             }   
         }
         fetchPosts()
-    }, [posts])
+    }, [])
 
     return (
       <>
         {Object.values(posts).length >= 0 ? (
           <div className="">
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8"></div>
-            {Object.values(posts).map((post: any) => (
-              <Post key={post?.id} data={post} />
-            ))}
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+              {Object.values(posts).map((post: any) => (
+                <Post key={post?.id} data={post} />
+              ))}
+            </div>
           </div>
         ) : (
           <div className="text-muted-foreground text-sm">No posts created</div>
