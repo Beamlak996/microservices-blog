@@ -1,0 +1,20 @@
+import express from "express"
+import cors from "cors"
+import bodyParser from "body-parser"
+
+const app = express()
+
+app.use(bodyParser.json())
+app.use(cors())
+
+app.get('/posts', (req, res)=> {
+
+})
+
+app.post('/events', (req, res)=> {
+
+})
+
+app.listen(4002, ()=> {
+    console.log("Listening to port 4002")
+})
