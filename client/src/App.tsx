@@ -1,10 +1,10 @@
-import { Button } from "./components/ui/button"
+import { PostCreate } from "./components/post/post-create"
 
 function App() {
 
   return (
-    <div className="text-xl text-rose-500 p-12 "  >
-     <Button>Click Me</Button>
+    <div className="flex min-h-screen justify-center mt-12 ju"  >
+     <PostCreate />
     </div>
   )
 }
