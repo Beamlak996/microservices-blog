@@ -1,25 +1,6 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
 import { Comment } from "./comment"
 
-export const CommentList = ({postId}: {postId: string}) => {
-    const [comments, setComments] = useState([])
-
-    useEffect(()=> {
-        const fetchComments = async () => {
-            try {
-                const res = await axios.get(
-                  `http://localhost:4001/posts/${postId}/comments`
-                );
-                setComments(res.data)
-            } catch (error) {
-                console.log("Something went wrong.", error)                
-            }
-        }
-        fetchComments()
-    }, [
-        
-    ])
+export const CommentList = ({comments}: any) => {
 
     return (
         <div>

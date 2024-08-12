@@ -9,8 +9,7 @@ export const PostList = () => {
     useEffect(()=> {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get("http://localhost:4000/posts");
-                console.log(res.data);
+                const res = await axios.get("http://localhost:4002/posts");
                 setPosts(res.data)
             } catch (error) {
                 console.log("Something went wrong.", error)
