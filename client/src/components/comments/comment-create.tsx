@@ -10,7 +10,7 @@ export const CommentCreate = ({ postId }: { postId: string }) => {
     e.preventDefault()
 
     try {
-        const res = await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
+        const res = await axios.post(`http://posts.com/posts/${postId}/comments`, {
             content
         })
 
